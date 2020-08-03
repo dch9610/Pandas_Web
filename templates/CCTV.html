@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+    <table class="table">
+        <h1>서울구별 cctv 현황 </h1>
+        <h2>cctv 총합: {{cctvTotal}}</h2>
+        <img src="/static/image/a.jpg">
+        <thead>
+        <tr><th>{{title[0]}}</th>
+            <th>{{title[1]}}</th>
+            <th>{{title[2]}}</th>
+            <th>{{title[3]}}</th>
+            <th>{{title[4]}}</th>
+            <th>{{title[5]}}</th>
+        </tr>
+        </thead>
+
+        <tbody>
+            {% for n1,n2,n3,n4,n5,n6 in data %}
+                <tr>
+                    <td>{{n1}}</td><td>{{n2}}</td>
+                    <td>{{n3}}</td><td>{{n4}}</td>
+                    <td>{{n5}}</td><td>{{n6}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+</div>
+</body>
+</html>
